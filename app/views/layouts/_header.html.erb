@@ -1,5 +1,4 @@
 
-<li><%= link_to "Account Settings", edit_user_registration_path %></li>
 <nav class="navbar navbar-default" role="navigation">
   <div class="container"> 
   <!-- Brand and toggle get grouped for better mobile display -->
@@ -21,6 +20,7 @@
       <li><%= link_to "About", about_path %></li>
       
       <% if user_signed_in?%>
+      <li><%= link_to "Account Settings", edit_user_registration_path %></li>
       <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
       <% else %>
        <li><%= link_to "Sign in", new_user_session_path %></li>
