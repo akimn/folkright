@@ -16,6 +16,22 @@
       <%= f.label :image %><br>
       <%= f.file_field :image, class: "form-control" %><br>
       <%= f.select :category, Category.all, :prompt => "Select One" %><br><!-- you can change this -->
+      <%= f.select :category, Category.all, :prompt => "Transportation" %>
+      <%= f.select :category, Category.all, :prompt => "Law Enforcement" %>
+      <%= f.select :category, Category.all, :prompt => "Parks & Recreation" %>
+      <%= f.select :category, Category.all, :prompt => "Schools & Education" %>
+      <%= f.select :category, Category.all, :prompt => "Public Facilities" %>
+      <%= f.select :category, Category.all, :prompt => "Roads & Streets" %>
+      <%= f.select :category, Category.all, :prompt => "Highways & Freeways" %>
+      <%= f.select :category, Category.all, :prompt => "Construction" %>
+      <%= f.select :category, Category.all, :prompt => "Law" %>
+      <%= f.select :category, Category.all, :prompt => "Municipal Court" %>
+      <%= f.select :category, Category.all, :prompt => "Utilities" %>
+      <%= f.select :category, Category.all, :prompt => "Public Lights" %>
+      <%= f.select :category, Category.all, :prompt => "Planning and Development" %>
+      <%= f.select :category, Category.all, :prompt => "Public Health" %>
+      <%= f.select :category, Category.all, :prompt => "Legislation" %>
+
       <%= f.label :description %><br>
       <%= f.text_field :description, class: "form-control" %><br>
       <%= f.submit "Create Concern", class: "btn btn-success" %>
