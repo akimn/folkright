@@ -9,7 +9,7 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <%= link_to "Project Folk", root_path, class: "navbar-brand " %>
+    <%= link_to "UNACRACY", root_path, class: "navbar-brand " %>
   </div>
 
   <!-- Collect the nav links, forms, and other content for toggling -->
@@ -19,8 +19,16 @@
       <li><%= link_to "Home", root_path %></li>
       <li><%= link_to "About", about_path %></li>
       
-      <% if user_signed_in?%>
+      <% if user_signed_in? %>
       <li><%= link_to '+ New Concern', new_pin_path %></li>
+
+    <!--  <li><%= link_to raw('span class="glyphicon glyphicon-plus"></span>New Concern'), new_pin_path %></li>
+    //another way down low
+    <% link_to new_pin_path do %>
+      <span class="glyphicon glyphicon-plus"></span> New Pin
+    <% end %>
+    </li>-->
+
       <li><%= link_to "Account Settings", edit_user_registration_path %></li>
       <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
       <% else %>
