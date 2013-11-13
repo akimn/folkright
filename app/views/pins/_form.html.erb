@@ -12,19 +12,14 @@
   <% end %>
 
   <div class="form-group">
-    <%= f.label :image %><br>
-    <%= f.file_field :image, class: "form-control" %>
-  </div>
-
-<div class="panel-body">
-  <div class="form-group">
-    <%= f.label :description %><br>
-    <%= f.text_field :description, class: "form-control" %>
-  </div>
-
-  <div class="form-group">
+    <div class="field">
+      <%= f.label :image %><br>
+      <%= f.file_field :image, class: "form-control" %><br>
+      <%= f.select :category, Category.all, :prompt => "Select One" %><br><!-- you can change this -->
+      <%= f.label :description %><br>
+      <%= f.text_field :description, class: "form-control" %><br>
       <%= f.submit "Create Concern", class: "btn btn-success" %>
+    </div>
   </div>
 
 <% end %>
-</div>

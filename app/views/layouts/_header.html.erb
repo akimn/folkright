@@ -9,26 +9,26 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <%= link_to "UNACRACY", root_path, class: "navbar-brand " %>
+    <%= link_to "PROJECT FOLK", root_path, class: "navbar-brand " %>
   </div>
 
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-    
+  
+  <!-- Search bar-->
+    <form class="navbar-form navbar-left" role="search">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search">
+      </div>
+      <button type="submit" class="btn btn-success">Search</button>
+    </form>
+
     <ul class="nav navbar-nav navbar-right">
-      <li><%= link_to "Home", root_path %></li>
+      <!--<li><%= link_to "Home", root_path %></li>-->
       <li><%= link_to "About", about_path %></li>
       
       <% if user_signed_in? %>
       <li><%= link_to '+ New Concern', new_pin_path %></li>
-
-    <!--  <li><%= link_to raw('span class="glyphicon glyphicon-plus"></span>New Concern'), new_pin_path %></li>
-    //another way down low
-    <% link_to new_pin_path do %>
-      <span class="glyphicon glyphicon-plus"></span> New Pin
-    <% end %>
-    </li>-->
-
       <li><%= link_to "Account Settings", edit_user_registration_path %></li>
       <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
       <% else %>
