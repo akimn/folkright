@@ -17,8 +17,6 @@ gem 'aws-sdk', '~> 1.25'
 gem 'masonry-rails', '~> 0.2.0'
 gem 'will_paginate', '~> 3.0'
 gem 'will_paginate-bootstrap'
-gem 'acts-as-taggable-on', '~> 2.4.1'
-gem 'sunspot_rails', '~> 1.3.0'
 
 
 group :development, :test do
@@ -33,5 +31,6 @@ end
 group :doc do
   gem 'sdoc', require: false
 end
+
 
 
