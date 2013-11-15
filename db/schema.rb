@@ -13,12 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20131113221638) do
 
-  create_table "categories", force: true do |t|
-    t.string   "name"
-    t.text     "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+  
 
   create_table "pins", force: true do |t|
     t.string   "description"
